@@ -94,43 +94,45 @@ export function TaskList(){
                         editingTask={editingTask}
                     />
                 </header>
-                <h2 className="tasklist-title">Mis Tareas</h2>
-                <nav className="tasklist-filters-container">
-                    <button 
-                        className={filter === "all" ? "btn-primary active" : "btn-secondary"}
-                        onClick={() => setFilter("all")}
-                    >
-                        Todas
-                    </button>
-                    <button 
-                        className={filter === "pending" ? "btn-primary active" : "btn-secondary"}
-                        onClick={() => setFilter("pending")}
-                    >
-                        Pendientes
-                    </button>
-                    <button 
-                        className={filter === "completed" ? "btn-primary active" : "btn-secondary"}
-                        onClick={() => setFilter("completed")}
-                    >
-                        Completadas
-                    </button>
-                </nav>
+                <div className="tasklist-mytasks">
+                    <h2 className="tasklist-title">Mis Tareas</h2>
+                    <nav className="tasklist-filters-container">
+                        <button 
+                            className={filter === "all" ? "btn-primary active" : "btn-secondary"}
+                            onClick={() => setFilter("all")}
+                        >
+                            Todas
+                        </button>
+                        <button 
+                            className={filter === "pending" ? "btn-primary active" : "btn-secondary"}
+                            onClick={() => setFilter("pending")}
+                        >
+                            Pendientes
+                        </button>
+                        <button 
+                            className={filter === "completed" ? "btn-primary active" : "btn-secondary"}
+                            onClick={() => setFilter("completed")}
+                        >
+                            Completadas
+                        </button>
+                    </nav>
 
-                <main className="tasks-list-container">
-                    {filteredTasks.length > 0 ? (
-                        filteredTasks.map(t => (
-                            <TaskItem 
-                                key={t.id}
-                                task={t}
-                                onDelete={handleDelete}
-                                onEdit={handleEdit}
-                                onToggle={handleToggle}
-                            />
-                        ))
-                    ) : (
-                        <p className="empty-message">No hay tareas para mostrar</p>
-                    )}
-                </main>
+                    <main className="tasks-list-container">
+                        {filteredTasks.length > 0 ? (
+                            filteredTasks.map(t => (
+                                <TaskItem 
+                                    key={t.id}
+                                    task={t}
+                                    onDelete={handleDelete}
+                                    onEdit={handleEdit}
+                                    onToggle={handleToggle}
+                                />
+                            ))
+                        ) : (
+                            <p className="empty-message">No hay tareas para mostrar</p>
+                        )}
+                    </main>
+                </div>   
             </div>
     );
 }

@@ -4,7 +4,7 @@
   align-items: center;
   font-family: var(--font-body);
   width: 100%;
-  padding: 20px;
+  padding-top: 10px;
 }
 
 /* CARD */
@@ -87,6 +87,6 @@
 /* TABLET */
 @media (max-width: 768px) {
   .login-box {
-    max-width: 90%;
+    max-width: 96%;
   }
 }

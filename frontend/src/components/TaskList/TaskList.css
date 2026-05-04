@@ -1,17 +1,16 @@
 .tasklist-card {
   width: 100%;
-  max-width: 700px; 
-  margin: 0 auto;   
+  max-width: 100%;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 30px;       
-  padding: 20px;
+  gap: 20px;
 }
 
 .tasklist-header {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 15px;
   text-align: start;
 }
 
@@ -19,169 +18,137 @@
   font-family: var(--font-title) !important;
   font-weight: 700 !important;
   color: var(--color-accent);
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   text-shadow: var(--shadow-glow);
-  margin: 0 auto;
+  text-align: center;
 }
 
 .tasklist-filters-container {
   display: flex;
-  justify-content: center; 
-  gap: 12px;
-  margin: 10px 0 20px 0;
+  justify-content: center;
+  gap: 8px;
 }
 
-
 .tasklist-filters-container button {
-  padding: 10px 22px;
+  padding: 8px 16px;
   border-radius: 30px;
   font-family: var(--font-body);
-  font-weight: 500;
+  font-size: 14px;
   cursor: pointer;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   border: 1px solid var(--color-border);
-  background: rgba(255, 255, 255, 0.05); 
+  background: rgba(255, 255, 255, 0.05);
   color: var(--color-text-muted);
+  white-space: nowrap; 
 }
 
 .tasklist-filters-container button.active {
-  background: var(--gradient-primary) !important; 
-  color: var(--color-bg) !important;            
+  background: var(--gradient-primary) !important;
+  color: var(--color-bg) !important;
   border: none;
   box-shadow: var(--shadow-glow);
-  transform: translateY(-2px);
-}
-
-.tasklist-filters-container button:not(.active):hover {
-  background: var(--color-surface);
-  border-color: var(--color-accent);
-  color: var(--color-text);
 }
 
 .tasks-list-container {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 12px;
   width: 100%;
 }
+
 
 .empty-message {
   text-align: center;
   color: var(--color-text-muted);
-  padding: 40px;
+  padding: 20px;
   background: var(--color-surface);
   border-radius: var(--radius);
   border: 1px solid var(--color-border);
   font-style: italic;
+  font-size: 13px;
 }
+
 
 .btn-primary {
   background: var(--gradient-primary) !important;
   color: var(--color-bg) !important;
   border: none !important;
-  padding: 10px 22px;
+  padding: 10px 16px;
   border-radius: 30px;
-  font-family: var(--font-body);
   font-weight: 600;
   cursor: pointer;
   box-shadow: var(--shadow-glow);
-  transition: all 0.3s ease;
-  display: inline-block;
-}
-
-.btn-primary:hover {
-  transform: translateY(-2px);
-  filter: brightness(1.1);
 }
 
 .btn-secondary {
   background: rgba(255, 255, 255, 0.05) !important;
   color: var(--color-text-muted) !important;
   border: 1px solid var(--color-border) !important;
-  padding: 10px 22px;
+  padding: 10px 16px;
   border-radius: 30px;
-  font-family: var(--font-body);
   cursor: pointer;
-  transition: all 0.3s ease;
 }
 
-.btn-secondary:hover {
-  background: var(--color-surface) !important;
-  border-color: var(--color-accent) !important;
-  color: var(--color-text) !important;
-}
-
-.active {
-  background: var(--gradient-primary) !important;
-  color: var(--color-bg) !important;
-  box-shadow: var(--shadow-glow) !important;
-  border: none !important;
-}
 
 @media (min-width: 768px) {
+
   .tasklist-card {
-    padding: 20px;
+    max-width: 1000px;
+    gap: 25px;
+  }
+
+  .tasklist-card h2.tasklist-title {
+    font-size: 1.6rem;
+  }
+
+  .tasklist-filters-container {
+    justify-content: center;
+    overflow-x: visible;
+    gap: 10px;
+  }
+
+  .tasklist-filters-container button {
+    padding: 10px 18px;
+    font-size: 15px;
+  }
+
+  .tasks-list-container {
+    gap: 14px;
+  }
+
+  .empty-message {
+    padding: 30px;
+    font-size: 14px;
+  }
+}
+
+
+@media (min-width: 1024px) {
+
+  .tasklist-card {
+    max-width: 1100px;
+    padding: 25px;
     gap: 30px;
   }
-  
+
+  .tasklist-card h2.tasklist-title {
+    font-size: 1.8rem;
+  }
+
   .tasklist-filters-container {
     gap: 12px;
   }
 
-  .tasklist-filters-container button,
-  .btn-primary,
-  .btn-secondary {
+  .tasklist-filters-container button {
     padding: 10px 22px;
     font-size: 16px;
   }
-}
 
-.active, 
-.tasklist-filters-container button.active,
-.btn-primary {
-  background: var(--gradient-primary) !important;
-  color: var(--color-bg) !important;
-  border: none !important;
-  box-shadow: var(--shadow-glow) !important;
-  font-weight: 600;
-}
+  .tasks-list-container {
+    gap: 16px;
+  }
 
-.btn-primary:hover,
-.active:hover {
-  transform: translateY(-2px);
-  filter: brightness(1.1);
-}
-
-.btn-secondary:hover,
-.tasklist-filters-container button:not(.active):hover {
-  background: var(--color-surface) !important;
-  border-color: var(--color-accent) !important;
-  color: var(--color-text) !important;
-}
-
-/* Lista de tareas */
-.tasks-list-container {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  width: 100%;
-}
-
-/* Mensaje vacío */
-.empty-message {
-  text-align: center;
-  color: var(--color-text-muted);
-  padding: 30px; 
-  background: var(--color-surface);
-  border-radius: var(--radius);
-  border: 1px solid var(--color-border);
-  font-style: italic;
-  font-size: 14px;
-}
-
-@media (min-width: 768px) {
   .empty-message {
     padding: 40px;
-    font-size: 16px;
+    font-size: 15px;
   }
 }

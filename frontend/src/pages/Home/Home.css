@@ -1,4 +1,3 @@
-/* CONTENEDOR GENERAL (APP LOGUEADA) */
 .home-container {
   min-height: 100vh;
   display: flex;
@@ -7,7 +6,6 @@
   width: 100%;
 }
 
-/* CONTENEDOR LOGIN */
 .login-page {
   min-height: 100vh;
   display: flex;
@@ -18,19 +16,23 @@
   padding: 20px;
 }
 
-/* CONTENIDO PRINCIPAL (APP) */
 .app-content {
-  width: 90%;
-  max-width: 1200px;
+  width: 100%;
+  max-width: 1200px; 
   margin: 0 auto;
-  padding: 0 1rem 4rem;
+  padding: 0 2rem 4rem;
 
   display: flex;
   flex-direction: column;
   gap: 25px;
 }
 
-/* TITULO BIENVENIDA (si usás WelcomeText) */
+.tasklist-mytasks{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
 .app-content h1 {
   text-align: center;
   font-family: var(--font-title);
@@ -39,11 +41,12 @@
   text-shadow: var(--shadow-glow);
 }
 
-/* RESPONSIVE */
 @media (min-width: 768px) {
   .app-content {
-    width: 95%;
-    gap: 30px;
+    padding: 0 1rem 3rem;
+  }
+  .tasklist-card {
+    padding: 10px;
   }
 }
 
