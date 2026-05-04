@@ -1,8 +1,15 @@
 # 📝 Taskify - Task Manager
 
-Aplicación web de lista de tareas.
+Aplicación web fullstack para la gestión de tareas con autenticación de usuarios.
 
-Permite crear, visualizar, actualizar y eliminar tareas, además de filtrarlas por estado.
+Permite crear, visualizar, actualizar y eliminar tareas, además de filtrarlas por estado y acceder mediante login con Google o Email.
+
+---
+
+## 🚀 Demo
+
+🔗 https://taskify-20ac7.web.app
+🔗 Backend: https://taskify-1-n4a1.onrender.com
 
 ---
 
@@ -10,13 +17,28 @@ Permite crear, visualizar, actualizar y eliminar tareas, además de filtrarlas p
 
 ### Frontend
 - React (con Vite)
-- Bootstrap
-- Fetch API
+- CSS custom (responsive)
+- Firebase Authentication
 
 ### Backend
 - Node.js
 - Express
-- SQLite3
+
+### Deploy
+- Vercel (frontend)
+- Render (backend)
+
+---
+
+## 🔐 Autenticación
+
+La aplicación incluye:
+
+- Login con Google
+- Login con Email y contraseña
+- Persistencia de sesión
+
+Implementado con Firebase Authentication.
 
 ---
 
@@ -55,6 +77,8 @@ npm run dev`
   - Todas
   - Pendientes
   - Completadas
+- Autenticación de usuarios
+- UI responsive (mobile + desktop)
 
 ---
 
@@ -95,14 +119,18 @@ Desarrollado por Luana Arias Lavia
 ---
 ## 📸 Capturas de pantalla
 
-### 🏠 Vista principal
-  <img width="1848" height="934" alt="image" src="https://github.com/user-attachments/assets/dfab7053-a58e-4370-b555-29de421be541" />
+### ⏳ Pantalla de Loading
+  <img width="1868" height="968" alt="image" src="https://github.com/user-attachments/assets/b2a89303-ab61-425b-a621-6d5acc19b278" />
+
   
-### ✏️ Editar tarea
-  <img width="1854" height="928" alt="image" src="https://github.com/user-attachments/assets/73e5fe33-18d3-4afc-be9c-50bb96c1dd28" />
+### 🔐 Iniciar sesion
+  <img width="1868" height="966" alt="image" src="https://github.com/user-attachments/assets/a94531d6-125f-4018-a2d2-fcdc1a0456bd" />
+
   
-### 🔍 Filtros
-  <img width="1854" height="921" alt="image" src="https://github.com/user-attachments/assets/0261da05-6e33-495a-8a96-cede0d00a9a3" />
+### 📋 Pantalla principal
+  <img width="1872" height="968" alt="image" src="https://github.com/user-attachments/assets/300b8e81-f0b5-477c-9b89-8480196c212c" />
+
+
 
 
 
