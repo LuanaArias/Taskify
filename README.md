@@ -109,14 +109,6 @@ Se utilizó una estructura basada en Git Flow:
 Desarrollado por Luana Arias Lavia
 
 ---
-
-## ✨ Bonus implementados
-
-- Filtro de tareas
-- Persistencia con SQLite
-- Uso de Bootstrap
-
----
 ## 📸 Capturas de pantalla
 
 ### ⏳ Pantalla de Loading
